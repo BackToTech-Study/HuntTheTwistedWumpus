@@ -1,4 +1,4 @@
-# HuntTheWumpus
+# HuntTheTwistedWumpus
 Hunt the wumpus multiplayer implementation
 
 ## Requirements
