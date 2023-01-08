@@ -19,7 +19,7 @@ Hunt the wumpus multiplayer implementation
 - [ ] Wumpus
   - [ ] Each map will contain 1 Wumpus
 
-- Giant bats
+- [ ] Giant bats
   - [ ] Each game will contain 2 Giant bats
   
 - [ ] Players
