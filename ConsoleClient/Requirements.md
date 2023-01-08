@@ -9,7 +9,7 @@
 - [ ] The client app will show to the user a list of messages that represents the sounds that the player heard
 - [ ] The user should be able to see the list of possible commands
 - [ ] The user should be able to select one of the possible commands for execution
-- [ ] The user sould be able to enter free text for the wisper, speak and scream commands
+- [ ] The user should be able to enter free text for the whisper, speak and scream commands
 
 ## Solving disconnections
 - [ ] In case the client app get's disconnected from a cave the app will attempt for a predefined duration to reconnect to the cave
