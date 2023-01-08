@@ -23,6 +23,8 @@
 - [ ] At the start of the game in Room 1 there will Y pebbles. Where Y = floor(number of players / 2) + 1
 
 # The Player
+- [ ] A player is an object that is connected to a client application
+- [ ] The communication between the game room and the client application is not bound to a specific protocol
 - [ ] The players will take turns making actions
 - [ ] The first player will be chosen at random
 - [ ] At the start of the game all players will be informed of theyr position in the list
@@ -34,6 +36,8 @@
 - [ ] At the start of his/her round each player with a magical bow receives 1 arrow
 - [ ] The player can be alive or dead
 - [ ] A dead player can still receive messages but can no longer send commands
+- [ ] At the start of the game the client application will receive a list of commands that the player can make
+- [ ] The player can receive commands from the client application
 
 # The Wumpus
 - [ ] The Wumpus will be placed in a randomly selected room that is not a pit room and has no players or Giants Bats in it
@@ -63,13 +67,14 @@
   - [ ] When a player speaks the sound he/she makes will have a propagation distance of 0
 - [ ] Scream
   - [ ] When a player speaks the sound he/she makes will have an infinte propagation distance
-
+- [ ] Hear a sound
+  - [ ] All sounds heard by a player will be sent to the client application
 
 # Room Command Types
 - [ ] Pebble dropped in this room
   - [ ] When the pebble is dropped or falls in a room that is not a pit, it will make a "click" sound with the propagation distance 1
   - [ ] When the pebble is dropped or falls in a room that is not a pit, it will make a "wushhh" sound with the propagation distance 1
-- [ ] Make / Receive sound
+- [ ] Make / Play a sound
 - [ ] Propagate sound
 - [ ] Receive arrow
   - [ ] If an arrow enters a room and the room has the Wumpus then the arrow will hit the Wumpus
