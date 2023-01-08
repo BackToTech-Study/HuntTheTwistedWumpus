@@ -40,6 +40,7 @@ Hunt the wumpus multiplayer implementation
   - [ ] Pickup magical bow
     - [ ] If the player picks up a magical bow and already has a pebble, the player will automaticaly drop the pebble in the current room  
   - [ ] Drop magical bow in the current room
+    - [ ] If the player drops the bow he looses the arrow
   - [ ] Pickup pebble
     - [ ] If the player picks up a pebble and already has a magical bow, the player will automaticaly drop the magical bow in the current room
   - [ ] Drop pebble in the current room 
