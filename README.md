@@ -45,7 +45,7 @@ Hunt the wumpus multiplayer implementation
   - [ ] Drop pebble in the current room 
   - [ ] Throw the pebble in an adiacent room if he/she has a pebble
     - [ ] Once a pebble lands in another room it will stay there until it is pikked up by another player
-  - [ ] Shoot an arrow in an adiacent room if he/she has a magical bow or an arrow
+  - [ ] Shoot an arrow in an adiacent room if he/she has a magical bow and an arrow
     - [ ] If the arrow reaches a room where the Wumpus is present, the arrow will kill the Wumpus
       - [ ] The player that kills the Wumpus is the winner of the game
       - [ ] All the players will be notified that the Wumpus was killed   
