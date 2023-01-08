@@ -1,10 +1,10 @@
 # HuntTheTwistedWumpus
-Hunt the wumpus multiplayer implementation
+Hunt the Wumpus multiplayer implementation
 
 ## Requirements
 
 ### The cave map
-- [ ] Is a collection of cave rooms numberd as in the following diagram
+- [ ] Is a collection of cave rooms numbered as in the following diagram
 
 ![Cave Map](https://github.com/BackToTech-Study/HuntTheWumpus/blob/main/Resources/CaveMap.png)
 
@@ -23,7 +23,7 @@ Hunt the wumpus multiplayer implementation
   - [ ] Each game will contain 2 Giant bats
   
 - [ ] Players
-  - [ ] Each game can accomodate maximum 5 players
+  - [ ] Each game can accommodate maximum 5 players
   
 ## Items 
 - [ ] Pebble / Stone  
@@ -38,21 +38,21 @@ Hunt the wumpus multiplayer implementation
 - [ ] The player turn will automatically timeout in 1 minute
 - [ ] Each player can do the following actions
   - [ ] Pickup magical bow
-    - [ ] If the player picks up a magical bow and already has a pebble, the player will automaticaly drop the pebble in the current room  
+    - [ ] If the player picks up a magical bow and already has a pebble, the player will automatically drop the pebble in the current room  
   - [ ] Drop magical bow in the current room
     - [ ] If the player drops the bow he looses the arrow
   - [ ] Pickup pebble
-    - [ ] If the player picks up a pebble and already has a magical bow, the player will automaticaly drop the magical bow in the current room
+    - [ ] If the player picks up a pebble and already has a magical bow, the player will automatically drop the magical bow in the current room
   - [ ] Drop pebble in the current room 
-  - [ ] Throw the pebble in an adiacent room if he/she has a pebble
+  - [ ] Throw the pebble in an adjacent room if he/she has a pebble
     - [ ] Once a pebble lands in another room it will stay there until it is picked up by another player
-  - [ ] Shoot an arrow in an adiacent room if he/she has a magical bow and an arrow
+  - [ ] Shoot an arrow in an adjacent room if he/she has a magical bow and an arrow
     - [ ] If the arrow reaches a room where the Wumpus is present, the arrow will kill the Wumpus
       - [ ] The player that kills the Wumpus is the winner of the game
       - [ ] All the players will be notified that the Wumpus was killed   
     - [ ] If the arrow reaches a room where there is one or more players, one of the players (random selection) in that room will be killed
       - [ ] When the player dies he/she will scream 
-  - [ ] Walk in an adiacent room  
+  - [ ] Walk in an adjacent room  
     - [ ] If a player walks in a room that is a pit, the player will die.
       - [ ] The falling player will scream 
     - [ ] (**1**)If a player walks in a room where the Wumpus sleeps, the Wumpus will eat the player   
@@ -60,33 +60,33 @@ Hunt the wumpus multiplayer implementation
     - [ ] If a player walks in a room with a Giant Bat, 
       - [ ] (**2**)
    - [ ] Wisper
-      - [ ] When a player wispers the wispers will only be heard by the other players in that room
+      - [ ] When a player whispers the whispers will only be heard by the other players in that room
    - [ ] Speak  
-      - [ ] When a player speaks the words will only be heard by the other players and/or the Wumpus in that room or the adiacent rooms
+      - [ ] When a player speaks the words will only be heard by the other players and/or the Wumpus in that room or the adjacent rooms
    - [ ] Scream
       - [ ] When a player screams the scream will be heard by all the other players and the Wumpus
 
 ## Pebble sounds
 - [ ] When the pebble is dropped or falls in a room that is not a pit, it will make a "click" sound
 - [ ] When the pebble is dropped or falls in a room that is not a pit, it will make a "wushhh" sound
-- [ ] The sound made by the pebble will be heard by the people in that room and the adiacent rooms
+- [ ] The sound made by the pebble will be heard by the people in that room and the adjacent rooms
 - [ ] The sound made by the pebble will be ignored by the Wumpus
 
 ## The Wumpus actions
-- [ ] If the Wumpus hears a sound it will move to an adiacent room that is not a pit and has no players
+- [ ] If the Wumpus hears a sound it will move to an adjacent room that is not a pit and has no players
 - [ ] If the Wumpus moves to a room with a Giant Bat, 
   - [ ] (**2**)
 - [ ] (**1**)
 
 ## Giant Bat actions
-- [ ] (**2**)If the Wumpus or a player walks in the room where the giant bat setteled then
+- [ ] (**2**)If the Wumpus or a player walks in the room where the giant bat settled then
   - [ ] the Giant Bat will pickup the Wumpus or player and drop it/he/she in a random room that is not a pit and has no players
   - [ ] then the Giant Bat will settle in a random room that is not a pit and has no players or the Wumpus
   - [ ] all the players will hear the sound of the wings made by the Giant Bat when it is flying
-  - [ ] the Wumpus will also hear the sound made by the Giant Bat and will move if it's not aleady carried by the Giant Bat
+  - [ ] the Wumpus will also hear the sound made by the Giant Bat and will move if it's not already carried by the Giant Bat
 
 ## Init
-- [ ] The map will be initialised with 4 randomly selected pit rooms
+- [ ] The map will be initialized with 4 randomly selected pit rooms
 - [ ] At the start of the game all players will be placed in Room 1
 - [ ] Room 1 will contain 3 magic bows and 2 pebbles
 - [ ] The Giant Bats will be placed in 2 different randomly selected rooms that are not pit rooms and have no players in it
