@@ -35,6 +35,7 @@ Hunt the wumpus multiplayer implementation
 ## Actions
 - [ ] The players will take turns executing actions
 - [ ] Each player can execute one action per turn
+- [ ] The player turn will automatically timeout in 1 minute
 - [ ] Each player can do the following actions
   - [ ] Pickup magical bow
     - [ ] If the player picks up a magical bow and already has a pebble, the player will automaticaly drop the pebble in the current room  
