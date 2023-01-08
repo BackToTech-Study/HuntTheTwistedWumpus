@@ -1,1 +1,8 @@
-
+- [ ] The client app can read inputs from the user
+- [ ] The client app can show messages to the user
+- [ ] The communication between the client app and the cave is not bound to a specific protocol
+- [ ] When connecting to a cave the client app will receive a list of possible commands
+- [ ] The user should be able to see the list of possible commands
+- [ ] The user should be able to select one of the possible commands for execution
+- [ ] The user sould be able to enter free text for the wisper, speak and scream commands
+- [ ] In case the client app get's disconnected from a cave the app will attempt for a predefined duration to reconnect to the cave
