@@ -24,10 +24,10 @@
 
 # The Player
 - [ ] A player is an object that is connected to a client application
-- [ ] The communication between the game room and the client application is not bound to a specific protocol
+- [ ] The communication between the cave and the client application is not bound to a specific protocol
 - [ ] The players will take turns making actions
 - [ ] The first player will be chosen at random
-- [ ] At the start of the game all players will be informed of theyr position in the list
+- [ ] At the start of the game all players will be informed of their position in the list
 - [ ] At the end of his turn the player will inform the next player in the list that is't his/her turn
 - [ ] When a player starts his/her turn the other players will be informed
 - [ ] A player can execute one command per turn
