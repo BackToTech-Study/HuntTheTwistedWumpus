@@ -23,7 +23,7 @@
 - [ ] There are 2 type of rooms
   - [ ] Pit
   - [ ] Regular
-- [ ] Regular rooms can hold people
+- [ ] Regular rooms can hold players
 - [ ] Regular rooms can hold 1 bat
 - [ ] Regular rooms can hold the Wumpus
 - [ ] Regular rooms can hold Magic Bows
