@@ -29,7 +29,7 @@
 - [ ] Regular rooms can hold Magic Bows
 - [ ] All room types can hold Pebbles
 - [ ] At the start of the game all players will be placed in Room 1
-- [ ] At the start of the game in Room 1 there will X magic bows. Where X = floor(number of players / 2) + 1
+- [ ] At the start of the game in Room 1 there will X magic bows. Where X = floor(number of players / 2)
 - [ ] At the start of the game in Room 1 there will Y pebbles. Where Y = roof(number of players / 2)
 
 # The Player
