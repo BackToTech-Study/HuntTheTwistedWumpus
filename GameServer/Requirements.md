@@ -10,8 +10,8 @@
 - [ ] The players will take turns executing commands
 - [ ] The first player will be chosen at random
 - [ ] At the start of the game the cave will whisper to each player the position he/she occupies in the list
-- [ ] When the turn changes the cave will whisper in all the rooms that have players that position of the player who's turn it is
-- [ ] If a player attempts to execute a command when it's not his or her turn, the cave will whisper to that player that it's not his/her turn and the command was ignored
+- [ ] When the turn changes the cave will whisper to each player, the position of the player who's turn is starting
+- [ ] If a player attempts to execute a command when it's not his or her turn, the player is gets the reply that it's not his/her turn and the command was ignored
 - [ ] A player's turn ends after executing one command
 - [ ] If the player who's turn it is does not make any action within a predefined duration (1minute), his/her turn ends automatically
 
@@ -51,8 +51,6 @@
 # Cave Command Types
 - [ ] Wisper to a player
   - [ ] When he cave whispers to a player the generated sound will have a propagation distance of 0
-- [ ] Wisper to a room
-  - [ ] When he cave whispers to a room the generated sound will have a propagation distance of 1
   
 # Player Command Types
 - [ ] Pick up Magical Bow
