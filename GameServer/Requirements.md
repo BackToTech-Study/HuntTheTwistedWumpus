@@ -125,4 +125,3 @@
 # Cave reconstruction
   - [ ] All commands executed in the cave will be stored in a persistent manned
   - [ ] If the game crashes before the game ends the state of the cave will be recreated using the stored commands
-
