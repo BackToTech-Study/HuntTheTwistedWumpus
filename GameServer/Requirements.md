@@ -50,7 +50,7 @@
 
 # Cave Command Types
 - [ ] Wisper to a player
-  - [ ] When he cave whispers to a player the generated sound will have a propagation distance of 0
+  - [ ] When the cave whispers to a player the generated sound will have a propagation distance of 0
   
 # Player Command Types
 - [ ] Pick up Magical Bow
@@ -97,6 +97,10 @@
   - [ ] When the room is closed it will clean all resources
 - [ ] Receive player
   - [ ] If the room is a pit then the player will die
+  - [ ] If the room is not a pit it will make a sound with the propagation distance of 1 indicating the name of the player that joined
+  - [ ] If the room is not a pit it will wisper to the player the current room number and the numbers of the connected rooms
+- [ ] Wisper to a player
+  - [ ] When the room wisper to a player the generated sound will have a propagation distance of 0
 
 # The sound
 - [ ] Each sound will have a propagation distance
