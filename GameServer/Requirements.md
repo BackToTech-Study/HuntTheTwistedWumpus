@@ -83,7 +83,7 @@
 # Room Command Types
 - [ ] Pebble dropped in this room
   - [ ] When the pebble is dropped or falls in a room that is not a pit, it will make a "click" sound with the propagation distance 2
-  - [ ] When the pebble is dropped or falls in a room that is not a pit, it will make a "wushhh" sound with the propagation distance 2
+  - [ ] When the pebble is dropped or falls in a room that is a pit, it will make a "wushhh" sound with the propagation distance 2
 - [ ] Receive / make sound
   - [ ] If a room receives a sound with the propagation distance of 0, it will ignore that sound
   - [ ] When the room will receive a sound it will decrease the sound propagation distance by 1 then play the sound
