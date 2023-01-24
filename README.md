@@ -57,7 +57,7 @@ Hunt the Wumpus multiplayer implementation
       - [ ] The falling player will scream 
     - [ ] (**1**)If a player walks in a room where the Wumpus sleeps, the Wumpus will eat the player   
       - [ ] The dying player will scream 
-    - [ ] If a player walks in a room with a Giant Bat, 
+    - [ ] If a player walks in a room with a Giant Bat
       - [ ] (**2**)
    - [ ] Wisper
       - [ ] When a player whispers the whispers will only be heard by the other players in that room
