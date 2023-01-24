@@ -1,6 +1,6 @@
 ﻿namespace GameServer.Room
 {
-    public class Room
+    public class Room : IRoom
     {
     }
 }

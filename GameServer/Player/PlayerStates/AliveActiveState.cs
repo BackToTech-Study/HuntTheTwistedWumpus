@@ -1,6 +1,6 @@
 ﻿namespace GameServer.Player.PlayerStates
 {
-    public class AliveActiveState
+    public class AliveActiveState : IState
     {
     }
 }
