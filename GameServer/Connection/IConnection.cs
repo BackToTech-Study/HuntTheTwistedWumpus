@@ -1,6 +1,6 @@
 ﻿namespace GameServer.Connection
 {
-    public interface Interface
+    public interface IConnection
     {
     }
 }
