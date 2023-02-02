@@ -3,7 +3,7 @@
 namespace GameServerUnitTests.CommandsTests
 {
     [TestClass]
-    public class WaltToCommandTests
+    public class WalkToCommandTests
     {
         [TestMethod]
         public void TestMethod()
