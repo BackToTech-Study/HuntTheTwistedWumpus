@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleClient.Sound
 {
-    internal class Sound
+    public class Sound
     {
     }
 }

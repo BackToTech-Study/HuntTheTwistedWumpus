@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleClient.Commands
 {
-    internal class WalkToCommand
+    public class WalkToCommand: ICommand
     {
     }
 }

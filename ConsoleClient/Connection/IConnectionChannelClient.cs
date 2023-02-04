@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleClient.Connection
 {
-    internal interface IConnectionChannelClient
+    public interface IConnectionChannelClient
     {
     }
 }

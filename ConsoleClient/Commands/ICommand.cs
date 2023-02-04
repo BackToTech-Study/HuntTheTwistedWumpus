@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleClient.Commands
 {
-    internal interface Interface1
+    public interface ICommand
     {
     }
 }

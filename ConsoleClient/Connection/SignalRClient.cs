@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleClient.Connection
 {
-    internal class SignalRClient
+    public class SignalRClient
     {
     }
 }
