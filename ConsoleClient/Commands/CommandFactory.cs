@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleClient.Commands
 {
-    internal class CommandFactory
+    public class CommandFactory
     {
     }
 }
