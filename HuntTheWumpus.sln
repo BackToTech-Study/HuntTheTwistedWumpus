@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameServerUnitTests", "GameServerUnitTests\GameServerUnitTests.csproj", "{BB72AF83-1439-4095-B076-D058F305009D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameServer", "GameServer\GameServer.csproj", "{522792B6-39CE-4F63-A7A2-16CF7541A20F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleClient", "ConsoleClient\ConsoleClient.csproj", "{641DDB71-B304-40F1-ADCB-6C96FB163287}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB72AF83-1439-4095-B076-D058F305009D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB72AF83-1439-4095-B076-D058F305009D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB72AF83-1439-4095-B076-D058F305009D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB72AF83-1439-4095-B076-D058F305009D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{522792B6-39CE-4F63-A7A2-16CF7541A20F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{522792B6-39CE-4F63-A7A2-16CF7541A20F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{522792B6-39CE-4F63-A7A2-16CF7541A20F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{522792B6-39CE-4F63-A7A2-16CF7541A20F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{641DDB71-B304-40F1-ADCB-6C96FB163287}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{641DDB71-B304-40F1-ADCB-6C96FB163287}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{641DDB71-B304-40F1-ADCB-6C96FB163287}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{641DDB71-B304-40F1-ADCB-6C96FB163287}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
