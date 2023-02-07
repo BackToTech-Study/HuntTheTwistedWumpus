@@ -1,6 +1,12 @@
-﻿namespace GameServer.Hubs
+﻿using Microsoft.AspNetCore.SignalR;
+
+namespace GameServer.Hubs
 {
-    public class CaveHub
+    public class CaveHub : Hub
     {
+        public Task MakeSound(string sound)
+        {
+            return Clients.All.SendAsync("ReceiveSound", sound);
+        }
     }
 }
