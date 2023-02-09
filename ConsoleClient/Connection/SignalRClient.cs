@@ -6,15 +6,17 @@ namespace ConsoleClient.Connection
     {
         public HubConnection _playerHubConnection;
         public HubConnection _caveHubConnection;
+        private const string _baseUrl = "https://localhost:7252";
+        
         public SignalRClient()
         {
             _playerHubConnection = new HubConnectionBuilder()
-                .WithUrl("https://localhost:7252/playerhub")
+                .WithUrl(_baseUrl + "/playerhub")
                 .WithAutomaticReconnect()
                 .Build();
 
             _caveHubConnection = new HubConnectionBuilder()
-                .WithUrl("https://localhost:7252/cavehub")
+                .WithUrl(_baseUrl + "/cavehub")
                 .WithAutomaticReconnect()
                 .Build();
         }
