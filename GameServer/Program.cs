@@ -15,7 +15,11 @@ namespace GameServer
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
+            builder.Services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Some API v1", Version = "v1" });
+                options.AddSignalRSwaggerGen();
+            });
 
             var app = builder.Build();
 
@@ -36,6 +40,7 @@ namespace GameServer
             app.MapHub<PlayerHub>("/playerhub");
 
             app.Run();
+
         }
     }
 }

@@ -8,5 +8,6 @@ namespace ConsoleClient.Connection
 {
     public interface IConnectionChannelClient
     {
+        Task Connect();
     }
 }

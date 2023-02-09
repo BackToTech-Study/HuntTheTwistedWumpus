@@ -1,4 +1,5 @@
 ﻿using ConsoleClient.Connection;
+using Microsoft.AspNetCore.SignalR.Client;
 
 namespace ConsoleClientUnitTests.ConnectionTests
 {
@@ -6,15 +7,17 @@ namespace ConsoleClientUnitTests.ConnectionTests
     public class SignalRClientTests
     {
         [TestMethod]
-        public void TestMethod()
+        public async Task Connect_ShouldStartHubConnections()
         {
             // Arrange
-            var clientConnection = new SignalRClient();
+            var signalRClient = new SignalRClient();
 
             // Act
+            await signalRClient.Connect();
 
-            // Assert
-            Assert.Fail("Test should fail because the class is empty");
+            //Assert
+            Assert.IsTrue(signalRClient._playerHubConnection.State == HubConnectionState.Connected);
+            Assert.IsTrue(signalRClient._caveHubConnection.State == HubConnectionState.Connected);
         }
     }
 }
