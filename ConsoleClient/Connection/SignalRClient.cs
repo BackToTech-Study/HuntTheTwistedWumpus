@@ -8,7 +8,7 @@ namespace ConsoleClient.Connection
         public HubConnection _playerHubConnection;
         public HubConnection _caveHubConnection;
         private readonly string _baseUrl;
-
+        
         public SignalRClient()
         {
             var configuration = new ConfigurationBuilder()
