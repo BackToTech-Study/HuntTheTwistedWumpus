@@ -1,6 +1,5 @@
 ﻿using ConsoleClient.Connection;
 using Microsoft.AspNetCore.SignalR.Client;
-using System.Threading.Tasks.Dataflow;
 
 namespace ConsoleClient
 {
@@ -8,6 +7,8 @@ namespace ConsoleClient
     {
         static async Task Main(string[] args)
         {
+
+
             SignalRClient signalRClient = new SignalRClient();
             Console.WriteLine("Player hub status: " + signalRClient._playerHubConnection.State);
             Console.WriteLine("Cave hub status: " + signalRClient._caveHubConnection.State);
