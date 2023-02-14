@@ -1,4 +1,5 @@
-﻿using GameServer.Hubs;
+﻿using GameServer.Commands;
+using GameServer.Hubs;
 using Microsoft.AspNetCore.SignalR;
 using Moq;
 
@@ -8,7 +9,7 @@ namespace GameServerUnitTests.HubsTests
     public class CaveHubTests
     {
         [TestMethod]
-        public void MakeSound_ShouldSendMessageToAllClients()
+        public async Task SendMessage_ShouldSendMessageToAllClients()
         {
             // Arrange
             var mockClients = new Mock<IHubCallerClients>();
@@ -23,10 +24,14 @@ namespace GameServerUnitTests.HubsTests
                 .Callback(() =>
                 {
                     wasCalled = true;
-                });
+                })
+                .Returns(Task.CompletedTask);
+
+            var makeSoundCommand = new Mock<ICommand>();
+            makeSoundCommand.Setup(x => x.Execute());
 
             // Act
-            caveHub.MakeSound("Make cave sound");
+            await caveHub.SendMessage(makeSoundCommand.Object);
 
             // Assert
             Assert.IsTrue(wasCalled, "The method `SendCoreAsync` was not called.");

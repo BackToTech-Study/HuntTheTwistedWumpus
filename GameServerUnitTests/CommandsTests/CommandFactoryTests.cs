@@ -6,15 +6,16 @@ namespace GameServerUnitTests.CommandsTests
     public class CommandFactoryTests
     {
         [TestMethod]
-        public void TestMethod()
+        public void CreateCommand_ReturnsInstanceOfGivenType()
         {
             //Arrange
             var commandFactory = new CommandFactory();
 
             //Act
+            ICommand command = commandFactory.CreateCommand<MakeSoundCommand>();
 
             //Assert
-            Assert.Fail("Test should fail because the class is empty");
+            Assert.IsInstanceOfType(command, typeof(MakeSoundCommand));
         }
     }
 }
