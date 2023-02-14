@@ -8,10 +8,8 @@ namespace ConsoleClient.Connection
         public HubConnection _playerHubConnection;
         public HubConnection _caveHubConnection;
         
-        public SignalRClient()
-        {
-            var configuration = new SignalRConfig();
-
+        public SignalRClient(ConfigVars configuration)
+        {          
             _playerHubConnection = new HubConnectionBuilder()
                 .WithUrl(configuration.BaseUrl + "/playerhub")
                 .WithAutomaticReconnect()

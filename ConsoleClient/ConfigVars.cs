@@ -5,22 +5,12 @@ namespace ConsoleClient
 {
     public class ConfigVars
     {
-        public class SignalRConfig
+        public IConfiguration configuration;
+        public string BaseUrl { get { return configuration.GetSection("BaseUrl").Value; } }   
+
+        public ConfigVars(IConfiguration configuration)
         {
-            public string BaseUrl { get; } 
-
-            public SignalRConfig()
-            {
-                var configuration = new ConfigurationBuilder()
-                    .SetBasePath(Directory.GetCurrentDirectory())
-                    .AddJsonFile("appsettings.json")
-                    .Build();
-
-                BaseUrl = configuration.GetSection("SignalR")["BaseUrl"];
-            }
+            this.configuration = configuration;
         }
-
-
-
     }
 }
