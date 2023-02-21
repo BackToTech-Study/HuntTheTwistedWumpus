@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConsoleClient.Commands
+﻿namespace ConsoleClient.Commands
 {
     public class WalkToCommand: ICommand
     {
+        public string Name { get; set; } = "Walk";
+        public void Execute()
+        {
+            Console.WriteLine(Name + " to cave placeholder");
+        }
     }
 }
