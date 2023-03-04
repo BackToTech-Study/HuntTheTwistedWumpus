@@ -1,9 +1,14 @@
-﻿namespace GameServer.Room
+﻿using GameServer.Commands;
+using GameServer.Hubs;
+
+namespace GameServer.Room
 {
+    using GameServer.Sound;
     public class Room : IRoom
     {
         public Dictionary<IRoom, List<IRoom>> _connectedRooms;
         public string Name { get; set; }
+        public Sound Sound { get; set; }
 
         public Room(string name)
         {
@@ -24,6 +29,11 @@
         public List<IRoom> GetConnectedRooms()
         {
             return _connectedRooms[this];
+        }
+
+        public void ReceiveSound(Sound sound)
+        {
+            this.Sound = sound;
         }
     }
 }

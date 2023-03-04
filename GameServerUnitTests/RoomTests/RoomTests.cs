@@ -1,4 +1,6 @@
 ﻿using GameServer.Room;
+using GameServer.Sound;
+using Moq;
 
 namespace GameServerUnitTests.RoomTests
 {
@@ -36,6 +38,20 @@ namespace GameServerUnitTests.RoomTests
             Assert.IsTrue(connectedRooms.Contains(room2));
             Assert.IsTrue(connectedRooms.Contains(room3));
             Assert.AreEqual(2, connectedRooms.Count);
+        }
+
+        [TestMethod]
+        public void ReceiveSound_SetsSoundProperty()
+        {
+            // Arrange
+            var room = new Room("test room");
+            var sound = new Sound(1, "TestSound");
+
+            // Act
+            room.ReceiveSound(sound);
+
+            // Assert
+            Assert.AreEqual(sound, room.Sound);
         }
     }
 }

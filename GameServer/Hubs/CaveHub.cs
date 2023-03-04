@@ -4,6 +4,7 @@ using SignalRSwaggerGen.Attributes;
 
 namespace GameServer.Hubs
 {
+    using GameServer.Sound;
     [SignalRHub]
     public class CaveHub : Hub
     {
