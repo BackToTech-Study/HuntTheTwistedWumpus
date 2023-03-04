@@ -28,7 +28,10 @@ namespace GameServerUnitTests.HubsTests
                 .Returns(Task.CompletedTask);
 
             var makeSoundCommand = new Mock<ICommand>();
-            makeSoundCommand.Setup(x => x.Execute());
+
+            //TODO refacor
+            throw new NotImplementedException();
+            // makeSoundCommand.Setup(x => x.Execute());
 
             // Act
             await caveHub.SendMessage(makeSoundCommand.Object);

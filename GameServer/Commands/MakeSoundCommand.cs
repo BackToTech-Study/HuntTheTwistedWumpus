@@ -1,46 +1,39 @@
-﻿namespace GameServer.Commands
+﻿using GameServer.Caverns;
+using GameServer.Messages;
+namespace GameServer.Commands
 {
-    using GameServer.Sound;
-    using GameServer.Room;
     public class MakeSoundCommand : ICommand
     {
-        public string Name { get; set; } = "Make sound";
+        public const string Name = "Make sound";
         private Sound _sound;
-        private IRoom _room;
-        private static bool _hasPropagated;
 
-        public MakeSoundCommand()
-        {
-        }
-
-        public MakeSoundCommand(Sound sound, IRoom room)
+        public MakeSoundCommand(Sound sound)
         {
             _sound = sound;
-            _room = room;
         }
 
-        public void PropagateSound(IRoom room, Sound sound)
+        private void PropagateSound(IRoom? room, Sound sound)
         {
-            if (_hasPropagated == true)
+            if (null == room || 0 >= sound.PropagationDistance)
             {
                 return;
             }
 
-            room.ReceiveSound(sound);
+            room.SoundSensibleObjects.ForEach(soundSensibleObject => soundSensibleObject.ReceiveSound(sound));
+            sound.PropagationDistance--;
 
-            List<IRoom> adjacentRooms = room.GetConnectedRooms();
+            var adjacentRooms = room.GetConnectedRooms();
 
-            if (sound.PropagationDistance > 0)
+            foreach (var adjacentRoom in adjacentRooms)
             {
-                adjacentRooms.ForEach(adjacentRoom => adjacentRoom.ReceiveSound(sound));
+                var newSound = new Sound(sound.PropagationDistance, sound.Name);
+                adjacentRoom.ReceiveSound(newSound);
             }
-
-            _hasPropagated = true;
         }
 
-        public void Execute()
+        public void Execute(object room)
         {
-            PropagateSound(_room, _sound);
+            PropagateSound((room as IRoom), _sound);
         }
     }
 }

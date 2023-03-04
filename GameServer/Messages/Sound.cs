@@ -1,8 +1,8 @@
-﻿namespace GameServer.Sound
+﻿namespace GameServer.Messages
 {
     public class Sound
     {
-        public int PropagationDistance { get; private set; }
+        public int PropagationDistance { get; set; }
         public string Name { get; private set; }
 
         public Sound(int propagationDistance, string name)
