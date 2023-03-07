@@ -13,10 +13,9 @@ namespace GameServerUnitTests.CommandsTests
             //Arrange
             var commandFactory = new CommandFactory();
             Sound sound = new Sound(1, "test");
-            var room = new Room("TestRoom");
 
             //Act
-            ICommand command = commandFactory.CreateCommand<MakeSoundCommand, Sound, IRoom>(sound, room);
+            ICommand command = commandFactory.CreateCommand<MakeSoundCommand, Sound>(sound);
 
             //Assert
             Assert.IsInstanceOfType(command, typeof(MakeSoundCommand));
