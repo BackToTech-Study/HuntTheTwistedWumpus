@@ -1,8 +1,9 @@
 ﻿using Microsoft.AspNetCore.SignalR;
-using System.Reflection.Metadata.Ecma335;
+using SignalRSwaggerGen.Attributes;
 
 namespace GameServer.Hubs
 {
+    [SignalRHub]
     public class PlayerHub : Hub
     {
         public Task SendMessage(string user, string message)

@@ -9,12 +9,15 @@ namespace ConsoleClientUnitTests.CommandsTests
         public void TestMethod()
         {
             // Arrange
-            var walkToCommand = new WalkToCommand();
+            var soundCommand = new WalkToCommand();
+            var consoleOutput = new StringWriter();
+            Console.SetOut(consoleOutput);
 
-            // Act
+            //Act
+            soundCommand.Execute();
 
-            // Assert
-            Assert.Fail("Test should fail because the class is empty");
+            //Assert
+            Assert.AreEqual("Walk to cave placeholder\r\n", consoleOutput.ToString());
         }
     }
 }

@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConsoleClient.Commands
+﻿namespace ConsoleClient.Commands
 {
     public class CommandFactory
     {
+        public ICommand CreateCommand<T>() where T : ICommand, new()
+        {
+            return new T();
+        }
     }
 }

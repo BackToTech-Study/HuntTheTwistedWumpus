@@ -1,12 +1,18 @@
-﻿using Microsoft.AspNetCore.SignalR;
+﻿using GameServer.Caverns;
+using GameServer.Commands;
+using Microsoft.AspNetCore.SignalR;
+using SignalRSwaggerGen.Attributes;
 
 namespace GameServer.Hubs
 {
+    [SignalRHub]
     public class CaveHub : Hub
     {
-        public Task MakeSound(string sound)
+        public async Task SendCavernSound(ICommand command, Room room)
         {
-            return Clients.All.SendAsync("ReceiveSound", sound);
+            command.Execute(room);
+
+            await Clients.All.SendAsync("ReceiveSound", command);
         }
     }
 }

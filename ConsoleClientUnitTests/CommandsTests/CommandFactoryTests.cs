@@ -6,15 +6,16 @@ namespace ConsoleClientUnitTests.CommandsTests
     public class CommandFactoryTests
     {
         [TestMethod]
-        public void TestMethod()
+        public void CreateCommand_ReturnsInstanceOfGivenType()
         {
-            // Arrange
+            //Arrange
             var commandFactory = new CommandFactory();
 
-            // Act
+            //Act
+            ICommand command = commandFactory.CreateCommand<WalkToCommand>();
 
-            // Assert
-            Assert.Fail("Test should fail because the class is empty");
+            //Assert
+            Assert.IsInstanceOfType(command, typeof(WalkToCommand));
         }
     }
 }

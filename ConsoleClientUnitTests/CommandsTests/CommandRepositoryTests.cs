@@ -1,4 +1,5 @@
 ﻿using ConsoleClient.Commands;
+using Moq;
 
 namespace ConsoleClientUnitTests.CommandsTests
 {
@@ -6,15 +7,37 @@ namespace ConsoleClientUnitTests.CommandsTests
     public class CommandRepositoryTests
     {
         [TestMethod]
-        public void TestMethod()
+        public void Add_ShouldAddCommandToList()
         {
             // Arrange
             var commandRepository = new CommandRepository();
+            var command = new Mock<ICommand>().Object;
 
             // Act
+            commandRepository.Add(command);
 
-            //Assert
-            Assert.Fail("Test should fail because the class is empty");
+            // Assert
+            CollectionAssert.Contains(commandRepository.GetAllCommands(), command);
+        }
+
+        [TestMethod]
+        public void GetAllCommands_ShouldReturnAllCommands()
+        {
+            // Arrange
+            var commandRepository = new CommandRepository();
+            var firstCommand = new Mock<ICommand>().Object;
+            var secondCommand = new Mock<ICommand>().Object;
+
+            commandRepository.Add(firstCommand);
+            commandRepository.Add(secondCommand);
+
+            // Act
+            var commands = commandRepository.GetAllCommands();
+
+            // Assert
+            Assert.AreEqual(2, commands.Count);
+            CollectionAssert.Contains(commands, firstCommand);
+            CollectionAssert.Contains(commands, secondCommand);
         }
     }
 }
