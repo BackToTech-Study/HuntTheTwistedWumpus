@@ -1,4 +1,4 @@
-﻿using GameServer.Player.PlayerStates;
+﻿using GameServer.Players.PlayerStates;
 
 namespace GameServerUnitTests.PlayerTests.PlayerStatesTests
 {

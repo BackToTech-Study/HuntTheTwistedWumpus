@@ -1,4 +1,4 @@
-﻿namespace GameServer.Player.PlayerStates
+﻿namespace GameServer.Players.PlayerStates
 {
     public interface IState
     {

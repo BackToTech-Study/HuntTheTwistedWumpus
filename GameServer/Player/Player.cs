@@ -1,4 +1,4 @@
-﻿namespace GameServer.Player
+﻿namespace GameServer.Players
 {
     public class Player
     {

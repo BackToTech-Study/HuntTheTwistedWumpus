@@ -1,5 +1,6 @@
 ﻿using GameServer.Commands;
 using GameServer.Messages;
+using GameServer.Players;
 
 namespace GameServer.Caverns
 {
@@ -7,9 +8,12 @@ namespace GameServer.Caverns
     {
         public List<IRoom> _connectedRooms;
         public string Name { get; set; }
-
         private readonly List<ISoundSensible> _soundSensibleObjects = new List<ISoundSensible>();
-        public List<ISoundSensible> SoundSensibleObjects { get { return _soundSensibleObjects; } }
+
+        public List<ISoundSensible> SoundSensibleObjects => _soundSensibleObjects;
+
+        private readonly List<Player> _players = new List<Player>();
+        public List<Player> Players => _players;
 
         public Room(string name)
         {
@@ -36,6 +40,26 @@ namespace GameServer.Caverns
         public void ExecuteCommand(ICommand command)
         {
             command.Execute(this);
+        }
+
+        public IReadOnlyList<Player> GetPlayers()
+        {
+            return _players.AsReadOnly();
+        }
+
+        public void ReceivePlayer(Player player)
+        {
+            _players.Add(player);
+        }
+
+        public void RemovePlayer(Player player)
+        {
+            _players.Remove(player);
+        }
+
+        public void WhisperPlayer(Player player)
+        {
+            // TODO_BOGI forgot the use case of this function
         }
     }
 }

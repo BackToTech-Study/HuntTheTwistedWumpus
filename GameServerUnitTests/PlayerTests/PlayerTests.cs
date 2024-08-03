@@ -1,4 +1,4 @@
-﻿using GameServer.Player;
+﻿using GameServer.Players;
 
 namespace GameServerUnitTests.PlayerTests
 {
