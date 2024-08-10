@@ -12,7 +12,7 @@ namespace ConsoleClientUnitTests.CommandsTests
             var commandFactory = new CommandFactory();
 
             //Act
-            ICommand command = commandFactory.CreateCommand<WalkToCommand>();
+            ICommand command = commandFactory.CreateCommand<WalkToCommand, string>("Walk to Test");
 
             //Assert
             Assert.IsInstanceOfType(command, typeof(WalkToCommand));

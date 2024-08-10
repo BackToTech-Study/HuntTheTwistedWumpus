@@ -40,7 +40,27 @@ namespace ConsoleClient
                 Console.WriteLine();
             });
 
-            Console.ReadLine();
+            ProcessInput(signalRClient);
+        }
+
+        static async void ProcessInput(SignalRClient signalRClient)
+        {
+            while (true)
+            {
+                var playerInput = Console.ReadLine();
+                IReadOnlyList<string> commands = signalRClient.GetCommands();
+
+                if (int.TryParse(playerInput, out int commandIndex) && commandIndex >= 0 && commandIndex < commands.Count)
+                {
+                    string command = commands[commandIndex];
+                    await signalRClient.SendPlayerCommand(command);
+                }
+                else if (string.IsNullOrWhiteSpace(playerInput))
+                {
+                    Console.WriteLine("Game over");
+                    break;
+                }
+            }
         }
     }
 }

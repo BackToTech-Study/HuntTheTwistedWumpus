@@ -9,7 +9,8 @@ namespace ConsoleClientUnitTests.CommandsTests
         public void TestMethod()
         {
             // Arrange
-            var soundCommand = new WalkToCommand();
+            const string name = "Walk to test";
+            var soundCommand = new WalkToCommand(name);
             var consoleOutput = new StringWriter();
             Console.SetOut(consoleOutput);
 
@@ -17,7 +18,7 @@ namespace ConsoleClientUnitTests.CommandsTests
             soundCommand.Execute();
 
             //Assert
-            Assert.AreEqual("Walk to cave placeholder\r\n", consoleOutput.ToString());
+            Assert.AreEqual("Walk to test\r\n", consoleOutput.ToString());
         }
     }
 }

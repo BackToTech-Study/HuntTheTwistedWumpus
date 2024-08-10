@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.SignalR.Client;
+﻿using ConsoleClient.Commands;
+using Microsoft.AspNetCore.SignalR.Client;
 using static ConsoleClient.ConfigVars;
 
 namespace ConsoleClient.Connection
@@ -7,6 +8,7 @@ namespace ConsoleClient.Connection
     {
         public HubConnection _playerHubConnection;
         public HubConnection _caveHubConnection;
+        private List<string> _commandsBuffer;
         
         public SignalRClient(ConfigVars configuration)
         {          
@@ -19,6 +21,8 @@ namespace ConsoleClient.Connection
                 .WithUrl(configuration.BaseUrl + "/cavehub")
                 .WithAutomaticReconnect()
                 .Build();
+
+            _commandsBuffer = new List<string>();
         }
 
         public async Task Connect()
@@ -33,8 +37,11 @@ namespace ConsoleClient.Connection
             {
                 Console.WriteLine(ex.Message);
             }
+        }
 
-
+        public async Task SendPlayerCommand(string message)
+        {
+            await _caveHubConnection.SendAsync("ProcessPlayerCommand", message);
         }
 
         private void ReceiveMessages()
@@ -46,14 +53,16 @@ namespace ConsoleClient.Connection
 
             _caveHubConnection.On<List<string>>("ReceiveAvailableCommands", (commands) =>
             {
+                _commandsBuffer.Clear();
                 Console.WriteLine("Available commands:");
-                int commandNumber = 0;
-                foreach (string command in commands)
+                for (int index = 0; index < commands.Count; ++index)
                 {
-                    Console.WriteLine($"{commandNumber}: {command}");
-                    commandNumber++;
+                    _commandsBuffer.Add(commands[index]);
+                    Console.WriteLine($"{index}: {commands[index]}");
                 }
             });
         }
+
+        public IReadOnlyList<string> GetCommands() { return _commandsBuffer; }
     }
 }

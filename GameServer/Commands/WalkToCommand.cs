@@ -5,12 +5,13 @@ namespace GameServer.Commands
 {
     public class WalkToCommand : ICommand
     {
-        public const string Name = "Walk to room";
+        public string Name = "Walk to ";
         private IRoom _room;
 
         public WalkToCommand(IRoom room)
         {
             _room = room;
+            Name += _room.Name;
         }
 
         private void MovePlayerToRoom(Player? player)
