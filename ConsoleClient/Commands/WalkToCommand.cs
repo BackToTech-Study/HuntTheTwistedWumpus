@@ -1,11 +1,19 @@
-﻿namespace ConsoleClient.Commands
+﻿using ConsoleClient.Connection;
+
+namespace ConsoleClient.Commands
 {
     public class WalkToCommand: ICommand
     {
-        public string Name { get; set; } = "Walk";
+        private string Name { get; set; } = "";
+
+        public WalkToCommand(string name)
+        {
+            Name = name;
+        }
+
         public void Execute()
         {
-            Console.WriteLine(Name + " to cave placeholder");
+            Console.WriteLine(Name);
         }
     }
 }

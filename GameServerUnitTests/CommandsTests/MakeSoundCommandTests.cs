@@ -8,7 +8,7 @@ namespace GameServerUnitTests.CommandsTests
     [TestClass]
     public class MakeSoundCommandTests
     {
-                [TestMethod]
+        [TestMethod]
         public void Execute_SoundPropagatedToConnectedRooms()
         {
             // Arrange

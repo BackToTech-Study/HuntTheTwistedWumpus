@@ -41,6 +41,8 @@ namespace GameServer
 
             app.Run();
 
+            GameManager gameManager = new GameManager();
+            gameManager.InitGameManager();
         }
     }
 }

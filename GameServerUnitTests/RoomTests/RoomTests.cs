@@ -68,6 +68,7 @@ namespace GameServerUnitTests.RoomTests
                 return;
             }
 
+            Mock<IRoom> roomMock = new Mock<IRoom>();
             Mock<Player> player = new Mock<Player>();
             //Act
             _room.ReceivePlayer(player.Object);
